@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick Breaker Game</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center my-5">
+        <h1 class="mb-4">Brick Breaker Game</h1>
+        
+        <div class="game-container mb-4">
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+            <div class="game-over" id="gameOver">
+                Game Over!
+                <span>Click to play again</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary me-2">Start Game</button>
+            <button id="pauseBtn" class="btn btn-warning me-2">Pause</button>
+            <button id="resetBtn" class="btn btn-danger">Reset</button>
+        </div>
+        
+        <div class="score-display mt-3">
+            <h3>Score: <span id="score">0</span></h3>
+            <h3>Lives: <span id="lives">3</span></h3>
+        </div>
+        
+        <div class="instructions mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">How to Play</h5>
+                    <p class="card-text">
+                        Use mouse or touch to move the paddle. Break all the bricks to win!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Game JS -->
+    <script src="game.js"></script>
+</body>
+</html>

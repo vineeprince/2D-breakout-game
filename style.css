@@ -1,0 +1,95 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+}
+
+canvas {
+    background-color: #000;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    touch-action: none; /* Important for touch devices */
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.score-display {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        width: 100%;
+    }
+    
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .controls .btn {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* Add this to your CSS file */
+.btn:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Add these styles to your CSS */
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-over:hover {
+    background-color: rgba(200, 0, 0, 0.9);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.game-over span {
+    font-size: 1rem;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Make buttons more touch-friendly on mobile */
+.btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+@media (max-width: 576px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 1.2rem;
+    }
+}
